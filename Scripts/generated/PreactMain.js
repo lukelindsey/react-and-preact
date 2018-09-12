@@ -70,12 +70,12 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 18:
+/***/ 19:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -95,23 +95,23 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 /** @jsx h */
-var preact_1 = __webpack_require__(19);
+var preact_1 = __webpack_require__(20);
 var AssetsTab = /** @class */ (function (_super) {
     __extends(AssetsTab, _super);
     function AssetsTab() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     AssetsTab.prototype.render = function () {
-        return preact_1.h("div", { class: "my-preact-component" });
+        return preact_1.h("div", { class: "my-preact-component" }, "Preact in here");
     };
     return AssetsTab;
 }(preact_1.Component));
-exports.default = AssetsTab;
+preact_1.render(preact_1.h(AssetsTab, null), document.getElementById("preact"));
 
 
 /***/ }),
 
-/***/ 19:
+/***/ 20:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

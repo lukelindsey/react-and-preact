@@ -499,7 +499,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
 var ReactDOM = __webpack_require__(9);
 var App_1 = __webpack_require__(17);
-ReactDOM.render(React.createElement(App_1.App, null), document.getElementById("root"));
+ReactDOM.render(React.createElement(App_1.App), document.getElementById("root"));
 
 
 /***/ }),
@@ -21567,11 +21567,18 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-// declare module "react";
+var Display_1 = __webpack_require__(18);
 var App = /** @class */ (function (_super) {
     __extends(App, _super);
-    function App() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function App(props) {
+        var _this = _super.call(this, props) || this;
+        _this.increment = function () {
+            _this.setState({ counter: _this.state.counter + 1 });
+        };
+        _this.state = {
+            counter: 0
+        };
+        return _this;
     }
     App.prototype.render = function () {
         return (React.createElement("div", { className: "App" },
@@ -21580,11 +21587,48 @@ var App = /** @class */ (function (_super) {
             React.createElement("p", { className: "App-intro" },
                 "To get started, edit ",
                 React.createElement("code", null, "src/App.tsx"),
-                " and save to reload.")));
+                " and save to reload."),
+            React.createElement("button", { onClick: this.increment }, "increment"),
+            React.createElement(Display_1.Display, { count: this.state.counter })));
     };
     return App;
 }(React.Component));
 exports.App = App;
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(1);
+// declare module "react";
+var Display = /** @class */ (function (_super) {
+    __extends(Display, _super);
+    function Display() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Display.prototype.render = function () {
+        return React.createElement("div", { className: "App" }, this.props.count);
+    };
+    return Display;
+}(React.Component));
+exports.Display = Display;
 
 
 /***/ })

@@ -1,10 +1,10 @@
 /** @jsx h */
-import { Component, h } from "preact";
+import { Component, h, render } from "preact";
 
 class AssetsTab extends Component {
   render() {
-    return <div class="my-preact-component" />;
+    return <div class="my-preact-component">Preact in here</div>;
   }
 }
 
-export default AssetsTab;
+render(<AssetsTab />, document.getElementById("preact"));
