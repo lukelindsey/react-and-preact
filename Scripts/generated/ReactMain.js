@@ -491,19 +491,15 @@ if (process.env.NODE_ENV === 'production') {
 
 /***/ }),
 /* 5 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__App__ = __webpack_require__(17);
 
-
-
-__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__App__["a" /* default */], null), document.getElementById("root"));
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(1);
+var ReactDOM = __webpack_require__(9);
+var App_1 = __webpack_require__(17);
+ReactDOM.render(React.createElement(App_1.App, null), document.getElementById("root"));
 
 
 /***/ }),
@@ -21552,11 +21548,10 @@ exports.unstable_unsubscribe = unstable_unsubscribe;
 
 /***/ }),
 /* 17 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -21570,24 +21565,26 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = __webpack_require__(1);
+// declare module "react";
 var App = /** @class */ (function (_super) {
     __extends(App, _super);
     function App() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     App.prototype.render = function () {
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: "App" },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("header", { className: "App-header" },
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", { className: "App-title" }, "Welcome to React")),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { className: "App-intro" },
+        return (React.createElement("div", { className: "App" },
+            React.createElement("header", { className: "App-header" },
+                React.createElement("h1", { className: "App-title" }, "Welcome to React")),
+            React.createElement("p", { className: "App-intro" },
                 "To get started, edit ",
-                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "src/App.tsx"),
+                React.createElement("code", null, "src/App.tsx"),
                 " and save to reload.")));
     };
     return App;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
-/* harmony default export */ __webpack_exports__["a"] = (App);
+}(React.Component));
+exports.App = App;
 
 
 /***/ })

@@ -1,14 +1,13 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
     "target": "es5",
     "lib": ["es6", "dom"],
     "sourceMap": true,
     "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node"
+    "jsx": "react"
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

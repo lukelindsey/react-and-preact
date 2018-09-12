@@ -1,7 +1,7 @@
 module.exports = {
   entry: {
     ReactMain: "./src/index.tsx",
-    // PreactMain: "./src/PreactMain.tsx"
+    PreactMain: "./src/PreactMain.tsx"
   },
   output: {
     filename: "Scripts/generated/[name].js",
