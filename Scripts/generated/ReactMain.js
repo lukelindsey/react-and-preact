@@ -21617,14 +21617,16 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
-// declare module "react";
+var myStyle = {
+    fontSize: 200
+};
 var Display = /** @class */ (function (_super) {
     __extends(Display, _super);
     function Display() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Display.prototype.render = function () {
-        return React.createElement("div", { className: "App" }, this.props.count);
+        return (React.createElement("div", { className: "App", style: myStyle }, this.props.count));
     };
     return Display;
 }(React.Component));
