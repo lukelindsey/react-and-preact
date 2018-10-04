@@ -21626,7 +21626,7 @@ var Display = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Display.prototype.render = function () {
-        return (React.createElement("div", { className: "App", style: myStyle }, this.props.count));
+        return (React.createElement("div", { class: "App", style: myStyle }, this.props.count));
     };
     return Display;
 }(React.Component));

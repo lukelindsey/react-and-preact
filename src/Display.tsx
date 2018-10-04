@@ -11,7 +11,7 @@ const myStyle: React.CSSProperties = {
 export class Display extends React.Component<IProps> {
   public render() {
     return (
-      <div className="App" style={myStyle}>
+      <div class="App" style={myStyle}>
         {this.props.count}
       </div>
     );
