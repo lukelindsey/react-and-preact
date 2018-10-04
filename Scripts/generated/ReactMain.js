@@ -499,7 +499,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(1);
 var ReactDOM = __webpack_require__(9);
 var App_1 = __webpack_require__(17);
-ReactDOM.render(React.createElement(App_1.App), document.getElementById("root"));
+ReactDOM.render(React.createElement(App_1.App, null), document.getElementById("root"));
 
 
 /***/ }),
