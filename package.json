@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/prop-types": "^15.5.6",
     "csstype": "^2.5.7",
     "preact": "^8.3.1",
     "react": "^16.5.0",

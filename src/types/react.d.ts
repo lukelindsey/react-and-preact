@@ -1,6 +1,35 @@
 
+type NativeAnimationEvent = AnimationEvent;
+type NativeClipboardEvent = ClipboardEvent;
+type NativeCompositionEvent = CompositionEvent;
+type NativeDragEvent = DragEvent;
+type NativeFocusEvent = FocusEvent;
+type NativeKeyboardEvent = KeyboardEvent;
+type NativeMouseEvent = MouseEvent;
+type NativeTouchEvent = TouchEvent;
+type NativePointerEvent = PointerEvent;
+type NativeTransitionEvent = TransitionEvent;
+type NativeUIEvent = UIEvent;
+type NativeWheelEvent = WheelEvent;
+
+// Any prop that has a default prop becomes optional, but its type is unchanged
+// Undeclared default props are augmented into the resulting allowable attributes
+// If declared props have indexed properties, ignore default props entirely as keyof gets widened
+// Wrap in an outer-level conditional type to allow distribution over props that are unions
+type Defaultize<P, D> = P extends any
+    ? string extends keyof P ? P :
+        & Pick<P, Exclude<keyof P, keyof D>>
+        & Partial<Pick<P, Extract<keyof P, keyof D>>>
+        & Partial<Pick<D, Exclude<keyof D, keyof P>>>
+    : never;
+
+// Declared props take priority over inferred props
+// If declared props have indexed properties, ignore inferred props entirely as keyof gets widened
+type MergePropTypes<P, T> = P & Pick<T, Exclude<keyof T, keyof P>>;
+
 declare module 'react' {
     import * as CSS from 'csstype';
+    import * as PropTypes from 'prop-types';
 
     namespace React {
         //
@@ -2442,6 +2471,7 @@ declare module 'react' {
             }
         }
     }
+
     export = React;
     // export as namespace React;
 }
